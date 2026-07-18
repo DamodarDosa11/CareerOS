@@ -3,7 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   LayoutDashboard, Search, FileCheck2, FileText, ListChecks, User,
-  Settings, LogOut, Sparkles,
+  Settings, LogOut, Sparkles, MessageSquareText,
 } from "lucide-react";
 
 const NAV = [
@@ -12,6 +12,7 @@ const NAV = [
   { href: "/ats-check", label: "ATS Resume Check", icon: FileCheck2 },
   { href: "/applications", label: "Applications", icon: ListChecks },
   { href: "/cover-letter", label: "AI Cover Letter", icon: FileText },
+  { href: "/interview-prep", label: "Interview Prep", icon: MessageSquareText },
   { href: "/profile", label: "Profile", icon: User },
 ];
 

@@ -71,6 +71,8 @@ export default function DashboardPage() {
 
   const applications = state.applications || [];
   const atsResult = state.atsResult;
+  const interviewingCount = applications.filter((a) => a.status === "Interviewing").length;
+  const offerCount = applications.filter((a) => a.status === "Offer").length;
 
   return (
     <div>
@@ -99,8 +101,10 @@ export default function DashboardPage() {
         </Card>
         <Card>
           <div className="text-xs text-slate-400 mb-1">Interviews</div>
-          <div className="text-2xl font-semibold">0</div>
-          <div className="text-xs text-slate-400 mt-1">Upcoming</div>
+          <div className="text-2xl font-semibold">{interviewingCount}</div>
+          <div className="text-xs text-slate-400 mt-1">
+            {offerCount > 0 ? `${offerCount} offer${offerCount > 1 ? "s" : ""} 🎉` : "In progress"}
+          </div>
         </Card>
       </div>
 
